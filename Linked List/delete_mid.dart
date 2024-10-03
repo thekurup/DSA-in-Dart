@@ -89,8 +89,8 @@ Node? createLinkedList(List<int> values) {
 
 void main() {
   // Create a sample linked list: 1 -> 2 -> 3 -> 4 -> 5
-  
-  var head = createLinkedList([1, 2, 3, 4, 5]);
+  var number=List.generate(5, (index)=> index+1);
+  var head = createLinkedList(number);
 
 //   This is like saying: "Please make me a linked list with the numbers 1, 2, 3, 4, and 5."
 // The function does all the work of creating Nodes and connecting them.
