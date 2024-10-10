@@ -49,7 +49,7 @@ Node? deleteMiddle(Node? head) {
   // We make the node before the middle point to the node 
   // after the middle, effectively removing the middle node.
   
-  return head;
+  return head; 
 
 }
 
