@@ -25,7 +25,7 @@ bool _checkBST(FamilyMember? node, int? minAge, int? maxAge) {
 void main() {
   var grandparent = FamilyMember(50);
   grandparent.younger = FamilyMember(30);
-  grandparent.older = FamilyMember(70);
+  grandparent.older = FamilyMember(70); 
   grandparent.younger!.younger = FamilyMember(20);
   grandparent.younger!.older = FamilyMember(40);
 

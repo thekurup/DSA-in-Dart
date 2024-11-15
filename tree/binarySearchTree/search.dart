@@ -55,7 +55,29 @@ class familytree{
     }
     
   }
+family?findperson(int searchage){
+  return police(root,searchage);
 }
+
+family?police(family?person,int searchage){
+
+  if(person==null){
+    return null;
+  }
+  if(person.age==searchage){
+    return person;
+  }
+  if(searchage<person.age){
+
+    return police(person.younger,searchage);
+
+  }else{
+    return police(person.older,searchage);
+  }
+}
+
+}
+
 
 void main(){
 // at last x enn prnja officer ee collect chaitha family tree data okke insert chaith 
@@ -63,12 +85,17 @@ void main(){
 
   x.insert(50);
 
-  
+  x.insert(20);
   x.insert(60);
   x.insert(30);
+  x.insert(70);
 
+  print("searching family member");
+  var found=x.findperson(30);
 
-  print("the idacrd is ");;
-// before sending id card grandpa ondn olla checkbox tick ittit akk id card allow chaiunth
-  x.printvalidate();
+  if(found!=null){
+    print("crimal is founded, and his age is ${found.age}");
+  }else{
+    print("not founded");
+  }
 }
